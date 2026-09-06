@@ -14,6 +14,12 @@ pipeline {
                 sh 'python3 -m pytest test_app.py -v'
             }
         }
+
+        stage('Docker Build') {
+            steps {
+                sh 'docker build -t practical4-cicd .'
+            }
+        }
     }
 
     post {
