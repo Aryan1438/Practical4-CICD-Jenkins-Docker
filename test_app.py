@@ -1,5 +1,7 @@
-def test_addition():
-    assert 2 + 3 == 5
+from app import add, subtract
 
-def test_string():
-    assert "Jenkins".lower() == "jenkins"
+def test_add():
+    assert add(2, 3) == 5
+
+def test_subtract():
+    assert subtract(5, 3) == 2
